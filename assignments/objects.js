@@ -139,7 +139,7 @@ console.log(parent.child.grandchild.age);
 // Have the parent speak
 
 parent.speak = function () {
-    return "Hello! I'm " + parent.name + ", I'm a parent." ;
+    return "Hello! I'm " + this.name + ", I'm a parent." ;
 }
 
 console.log(parent.speak());
@@ -147,7 +147,7 @@ console.log(parent.speak());
 // Have the child speak
 
 parent.child.speak = function () {
-    return "Hello! I'm " + parent.child.name + ", I'm a child." ;
+    return "Hello! I'm " + this.name + ", I'm a child." ;
 }
 
 console.log(parent.child.speak());
@@ -158,7 +158,7 @@ console.log(parent.child.speak());
 //
 
 parent.child.grandchild.speak = function () {
-    return "Hello! I'm " + parent.child.grandchild.name + ", I'm a grandchild.";
+    return "Hello! I'm " + this.name + ", I'm a grandchild.";
 }
 
 console.log(parent.child.grandchild.speak());
